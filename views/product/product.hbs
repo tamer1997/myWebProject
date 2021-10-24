@@ -1,0 +1,30 @@
+{{#if product}}
+<section class="post-section">
+	<div class="container">
+		<div class="row">
+			<div class="post-img">
+				<div class="img-box">
+					<img src="/{{product.image}}" class="img-responsive" id="postImage" alt="Post Image">
+					{{#if session.isLoggedIn}} <br>
+					<div class="editPost">
+						<a href="/products/deleteProduct/{{product.id}}">Delete</a>
+						<a href ="/products/editProduct/{{product.id}}" id="sendBtn"> Edit </a>
+					</div>
+					{{/if}}
+				</div>
+			</div>
+			<div class="post-content">
+				<div class="section-title">
+					<h1>{{product.name}}</h1>
+				</div>
+				<p>{{product.description}}</p>
+				<p>{{product.price}} kr</p>
+				<div class="contactProductOwner">
+					<p>Are you interested in this product?</p>
+					<a href ="/contact/contactAdmin"> Contact me </a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{/if}}

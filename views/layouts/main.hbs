@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamer Blog</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href = "/layout.css">
+</head>
+<body>
+    
+<section class = "home-section">
+<div class="off-canvas off-canvas-sidebar-show">
+        <a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
+            <i class="icon icon-menu"></i>
+        </a>
+     
+<header class="header">
+     <div class="container">
+        <div class="row justify-content-between align-items-center">
+            
+            <div class="brand-name">
+                <a href="/">Tamer Blog</a>
+            </div>
+            
+            <div id="sidebar-id" class="off-canvas-sidebar">
+            
+                <ul>
+                    <li><a href="/index?page=1">Home</a></li>
+                    <li><a href="/products">Product</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact/contactAdmin">Contact</a></li>
+                    {{#if session.isLoggedIn}} 
+                        <li><a href="/products/create">Create product</a></li>
+                        <li><a href="/posts/create">Create Post</a></li>
+                        <li><a href="/logout">Logout</a></li> 
+                    {{else}}
+                        <li><a href="/auth/login">Login</a></li>
+                    {{/if}}
+                </ul>
+        
+            </div>
+            <a class="off-canvas-overlay" href="#close"></a>
+
+                <div class="off-canvas-content">
+                    <nav>
+                        <ul>
+                            <li><a href="/index?page=1">Home</a></li>
+                            <li><a href="/products">Product</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/contact/contactAdmin">Contact</a></li>
+                            {{#if session.isLoggedIn}} 
+                                <li><a href="/products/create">Create Product</a></li>
+                                <li><a href="/posts/create">Create post</a></li>
+                                <li><a href="/logout">Logout</a></li> 
+                            {{else}}
+                                <li><a href="/auth/login">Login</a></li>
+                            {{/if}}
+                        </ul>
+                    </nav>
+                </div>
+        </div>
+
+    </div>
+	<main>
+		{{{body}}}
+	</main>
+</header>
+
+</section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<div class="deleteBody">
+	<h1>Delete Post</h1> <br> <br>
+	<p> Are you sure you want to delete post named {{post.title}}?</p>
+	<form action="/posts/deletePost/{{post.id}}" method="post">
+		<input type="hidden" name="_csrf" value="{{token}}">
+		<button type="submit">Delete it</button>
+	</form>
+</div>

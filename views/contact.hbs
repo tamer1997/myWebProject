@@ -1,0 +1,39 @@
+<section class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="contact-img">
+                <div class="img-box">
+                    <div class="section-title">
+                        <h1>Contact Me</h1>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="row" >
+            <div class ="conteact-form">
+                <form class ="form" action="/contact/contactAdmin" method="POST" >
+                    <div class="row">
+                        <div class="left input-group">
+                            <label class="form-label" for="senderSubject">Subject</label>
+                            <input class="form-input" type="text" name="senderSubject" placeholder=" Enter Your Subject Here">
+                        </div>
+                    <div class="right input-group">
+                        <label class="form-label" for="senderEmail">Email</label>
+                        <input class="form-input" type="text" name="senderEmail" placeholder=" Enter Your Email Here">
+                    </div> 
+                    </div> 
+                    <div class="row">
+                        <div class="input-group">
+                            <label class="form-label" for="senderMsgContent">Message</label>
+                            <textarea  class="form-input" name="senderMsgContent" placeholder=" Enter Your Message Here"></textarea>
+                        </div>
+                    </div>
+                    <input type="hidden" name="_csrf" value="{{token}}">
+                    <div class="form-btn">
+                        <button type="submit" class="btn btn-01">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,25 @@
+<div class="containerError">
+	{{#if validationLoginErr.length}}
+		<p>Couldn't login because:</p>
+		<ul>
+			{{#each validationLoginErr}}
+				<li>{{this}}</li>
+			{{/each}}
+		</ul>
+	{{/if}}
+</div>
+
+<div class="loginBody">
+	<form action="/auth/login" method="POST">
+		<div class="containerLogin">
+			<label for="username"><b>Username</b></label> <br>
+			<input type="text" placeholder="Enter Username" name="username" required> <br>
+
+			<label for="password"><b>Password</b></label> <br>
+			<input type="password" placeholder="Enter Password" name="password" required>
+				
+			<input type="hidden" name="_csrf" value="{{token}}">
+			<button type="submit">Login</button>
+		</div>
+	</form>
+</div>

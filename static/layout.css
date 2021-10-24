@@ -1,0 +1,622 @@
+.off-canvas .off-canvas-sidebar, .off-canvas .off-canvas-toggle {
+    display: none;
+}
+
+.off-canvas-content {
+    padding: 0!important;
+}
+@media screen and (max-width: 600px) {
+    .off-canvas .off-canvas-sidebar, .off-canvas .off-canvas-toggle {
+        display: block;
+    }
+
+    .off-canvas-content> nav {
+        display: none;
+    }
+}
+
+body{
+    margin: 0;
+    line-height: 1.5;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}
+
+.header{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+}
+.header .brand-name{
+    padding: 0 15px;
+    margin-left: 40px;
+
+}
+
+.header .brand-name a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #ff9800;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;  
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0 10px;
+}
+
+/* nav ul{
+    display:flex;
+}
+
+nav ul li a{
+    margin:0px;
+    font-family: myriad pro regular;
+    color: #505050;
+    font-size: 15px;
+    font-weight: 700;
+} */
+/* 
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transform: translateX(50%);
+}
+
+nav ul li{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color : #ffffff;
+    padding: 25px 0;
+    display: block;
+    transition: all 0.5s ease;
+    color:#ff9800
+}
+
+nav ul li a:hover{
+    color: black;
+}
+ */
+
+.header nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav ul li{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.header nav ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color : #ffffff;
+    padding: 25px 0;
+    display: block;
+    transition: all 0.5s ease;
+    color:#ff9800 
+}
+
+.header nav ul li a:hover{
+    color: black;
+}
+
+/* home section */
+.home-section{
+    min-height: 100vh;
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    max-width: 1170px;
+    margin:auto;
+}
+
+/* === Contact Page === */
+.contact-section{
+    padding: 80px 0px 80px;
+}
+
+.contact-section .contact-img{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+.contact-section .contact-img .img-box{
+    padding: 200px 0;
+    background-size: cover;
+    background-position: center
+}
+
+.contact-section .section-title{
+    text-align: center;
+}
+
+.contact-section .section-title h1{
+    color:#ccc;
+    top: -250px;
+}
+
+.contact-section .section-title h1::before{
+    background-color: #ff9800;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.contact-section .conteact-form{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0px 65px;
+}
+
+
+.contact-section .conteact-form .form{
+    background-color: #f3f2f1;
+    padding: 55px 40px;
+    margin-top: -500px;
+}
+.contact-section .conteact-form .form label{
+    color :#000000;
+    font-weight: 500;
+    display: block;
+    margin: 0 0 5px;
+}
+.contact-section .conteact-form .form .input-group{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.contact-section .conteact-form .form .input-group.left,
+.contact-section .conteact-form .form .input-group.right{
+    flex: 0 0 80%;
+    max-width: 50%;
+}
+
+.contact-section .conteact-form .form .form-input{
+    width: 100%;
+    height: 45px;
+    padding:6px 0px;
+	color:#000000;
+	font-size: 16px;
+	background-color: transparent;
+	border:none;
+	border-bottom: 1px solid #cccccc;
+}
+
+.contact-section .form-group .form .form-input{
+    height: 140px;
+    resize: none;
+}
+
+.contact-section .conteact-form .form .form-btn{
+    text-align: center;
+}
+
+/* About Page */
+
+.about-section{
+    padding: 80px 0;
+
+}
+
+.about-section .about-img{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 15px;
+}
+
+.about-section .about-img .img-box img{
+    width: 100%;
+    display: block;
+}
+
+.about-section .about-content{
+    color: #ff9800;
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+    padding: 0 15px;
+}
+
+
+/* Post Page */
+
+.post-section .post-img{
+    flex: 0 0 33.33%;
+    max-width: 400px;
+    max-height: 800px;
+    padding: 0 15px;
+}
+
+.post-section .post-img .img-box img{
+    width: 100%;
+    display: block;
+}
+
+.post-section .post-content{
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+    padding: 0 15px;
+    color:wheat;
+}
+
+.section-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+
+.section-title h1{
+    display: inline-block;
+    font-size: 40px;
+    color: rgb(54, 51, 51);
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+
+}
+
+.section-title h1:before{
+    content:'';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 3px;
+    background-color: #ff9800;
+}
+
+/* Login */
+
+.loginBody{
+    text-align: center;
+    margin:100px;
+}
+
+.loginBody button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+  }
+  
+.loginBody  button:hover {
+    opacity: 0.8;
+  }
+
+.loginBody input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: borde-box;
+  }
+
+.containerLogin {
+    padding: 16px;
+    color: wheat;
+  }
+
+.containerError {
+    padding: 16px;
+    color: wheat;
+  }
+
+.loginBody {font-family: Arial, Helvetica, sans-serif;}
+
+/* form {border: 3px solid #f1f1f1;} */
+
+.commentBody input[type=text]{
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: borde-box;
+}
+
+.nameBody{
+    color: wheat;
+    font-family: arial;
+}
+
+.editPost{
+    margin: 60px;
+    display: inline;
+
+}
+
+.image-responsive{
+    max-width: 200px;
+    max-height: 300px;
+    border-radius: 10%;   
+}
+
+.postBox{
+    display: inline-flex;
+    /* background-color: rgb(90, 87, 97); */
+    margin-left: 40px;
+    border-radius: 10%;
+
+}
+
+.posts{
+    padding: 20px;
+    display:table-column;
+}
+
+.postBox a:link, a:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid#ff9800;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .postBox a:hover, a:active {
+    background-color:#ff9800;
+    color: white;
+  }
+
+.editPost a:link, a:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid#ff9800;
+    padding: 2px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10%;
+    
+  }
+
+  .editPost a:hover, a:active {
+    background-color:#ff9800;
+    color: white;
+  }
+
+  /* Create Post */
+
+.createPostBody button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+.createPostBody  button:hover {
+    opacity: 0.8;
+  }
+
+.createPostBody input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: borde-box;
+    
+  }
+
+  .createPostBody h1{
+    display: inline-block;
+    font-size: 40px;
+    color:#ccc;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+
+}
+  .createPostBody h1:before{
+    content:'';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 3px;
+    background-color: #ff9800;
+}
+
+  .description{
+    width: 100%;
+    height: 100px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: borde-box;
+  }
+
+.createPostBody {
+    padding: 16px;
+  }
+
+.createPostBody {
+    font-family: Arial, Helvetica, sans-serif;
+    color:#ccc
+}
+
+/* Delete */
+
+.deleteBody h1{
+    display: inline-block;
+    font-size: 40px;
+    color:#ccc;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+
+}
+
+.deleteBody h1:before{
+    content:'';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 3px;
+    background-color: #ff9800;
+}
+
+.deleteBody {
+    padding: 16px;
+  }
+
+.deleteBody button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 35%;
+  }
+
+  .deleteBody p{
+    font-family: Arial, Helvetica, sans-serif;
+    color:white
+  }
+
+  /* Comments */
+.commentBody button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    
+  }
+  
+.commentBody  button:hover {
+    opacity: 0.8;
+  }
+
+.commentBody input[type=text]{
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: borde-box;
+    max-height: 5px;
+  }
+
+.containerComment {
+    padding: 16px;
+  }
+
+.commentBody {
+    font-family: none;
+    color:white;
+}
+
+/* Display All Comment */
+.comment-section{
+    max-height: 25vh;
+    max-width: 40%;
+    background-color: #AE9999;
+    overflow-y:scroll;
+}
+.comment{
+    height: 5%;
+    padding: 2%;
+    margin: 2%;
+    background-color: black;
+    color: #ff9800;
+}
+
+.comment p{
+    font-size: 15px;
+}
+
+.handleComment a:link, a:visited{
+    background-color: white;
+    color: black;
+    border: 2px solid#ff9800;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contactProductOwner a:hover, a:active {
+    background-color:#ff9800;
+    color: white;
+  }
+
+.contactProductOwner a:link, a:visited{
+    background-color: white;
+    color: black;
+    border: 2px solid#ff9800;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contactProductOwner a:hover, a:active {
+    background-color:#ff9800;
+    color: white;
+  }
+
+
+.thanksMessage{
+    font-size: 35px;
+    color: #ff9800;
+    text-align: center;
+    margin:150px;
+}
+
+.emptyContent{
+    font-size: 35px;
+    color: #ff9800;
+    text-align: center;
+    margin:150px;
+}

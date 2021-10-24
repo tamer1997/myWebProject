@@ -1,0 +1,31 @@
+
+<div class="createPostBody"> 
+     <div class="containerError">
+        {{#if errors.length}}
+            <p>Couldn't Edit the product because:</p>
+            <ul>
+                {{#each errors}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul> 
+        {{/if}}
+    </div>
+
+    {{#if products}}
+    <form action="/products/editProduct/{{products.id}}" method="POST">
+            <h1>Edit Product</h1>
+            <br><br>
+            <label class="form-label" for="title">Title</label>
+            <input class="form-input" type="text" name="name" value="{{products.name}}" required>
+            <br> <br>
+            Description:<br>
+			<textarea class="description" name="description">{{products.description}}</textarea>
+			<br>
+            Price:<br> <input type="number" name="price" value="{{products.price}}">
+
+            <input type="hidden" name="_csrf" value="{{token}}">
+            <br><hr>
+            <button class = "btn" id ="sendBtn"> Edit </button>
+    </form> 
+    {{/if}}
+</div>

@@ -1,0 +1,9 @@
+<div class="deleteBody">
+	<h1>Delete Comment</h1> <br> <br>
+	<p> Are you sure you want to delete comment named {{comment.name}}?</p>
+	<form action="/posts/deleteComment/{{comment.id}}" method="post">
+		<input type="hidden" name="_csrf" value="{{token}}">
+        <input type="hidden" name="postId" value="{{postId}}"/>
+		<button type="submit">Delete it</button>
+	</form>
+</div>

@@ -1,0 +1,21 @@
+<div class="containerError">
+	{{#if errors.length}}
+		<p>Couldn't create the post because:</p>
+		<ul>
+			{{#each errors}}
+				<li>{{this}}</li>
+			{{/each}}
+		</ul>
+	{{/if}}
+</div>
+<div class="createPostBody">
+	<form action="/posts/create" method="POST" enctype="multipart/form-data">
+			<h1>Create Post</h1>
+			<label class="form-label" for="img">Select image:</label>
+			<input class="form-input" type="file" id="img" name="img" required>
+			Title: <input type="text" name="title" value="{{title}}">
+			Description:<textarea class="description" name="description">{{description}}</textarea>
+			<input type="hidden" name="_csrf" value="{{token}}">
+			<button type="submit">Create</button>
+	</form>
+</div>

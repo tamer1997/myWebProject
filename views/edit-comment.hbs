@@ -1,0 +1,29 @@
+
+<div class="createPostBody">  
+    <div class="containerError">
+        {{#if errors.length}}
+            <p>Couldn't create the comment because:</p>
+            <ul>
+                {{#each errors}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </div>
+    {{#if comments}}
+        <form action="/posts/updateComment/{{comments.id}}" method="POST">
+            <input type="hidden" name="_csrf" value="{{token}}">
+            <input type="hidden" name="postId" value="{{postId}}"/>
+            <h1>Edit Comment</h1>
+            <br><br>
+            <label class="form-label" for="name">Name</label>
+            <input class="form-input" type="text" name="name" value="{{comments.name}}" required>
+            <br> <br>
+            <label for="comment"><b>Comment</b></label>
+            <input type="text" name="comment" value="{{comments.comment}}" required>
+            <br>
+            <br><hr>
+            <button class = "btn" id ="sendBtn"> Edit Comment </button>
+        </form> 
+    {{/if}}
+</div>

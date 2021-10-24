@@ -1,0 +1,9 @@
+<div class="deleteBody">
+	<h1>Delete product</h1> <br> <br>
+	<p> Are you sure you want to delete product named {{product.name}}?</p>
+	<form action="/products/deleteProduct/{{product.id}}" method="post">
+			<input type="hidden" name="_csrf" value="{{token}}">
+
+		<button type="submit">Delete it</button>
+	</form>
+</div>

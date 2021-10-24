@@ -1,0 +1,65 @@
+{{#if post}}
+<section class="post-section">
+	<div class="container">
+		<div class="row">
+			<div class="post-img">
+				<div class="img-box">
+					<img src="/{{post.image}}" class="img-responsive" id="postImage" alt="Post Image">
+					{{#if session.isLoggedIn}} <br>
+					<div class="editPost">
+						<a href="/posts/deletePost/{{post.id}}">Delete</a>
+						<a href ="/posts/editPost/{{post.id}}" id="sendBtn"> Edit </a>
+					</div>
+					{{/if}}
+				</div>
+			</div>
+			<div class="post-content">
+				<div class="section-title">
+					<h1>{{post.title}}</h1>
+				</div>
+				<p>{{post.description}}</p><br><br>
+				<div class="comment-section">
+				<form action="/posts/comment" method="POST">
+					<div class="containerComment">
+						<input type="hidden" name="postId" value="{{post.id}}">
+						<label for="username"><b></b></label>
+						<input type="text" placeholder="Enter Your Name" name="name" required>
+
+						<label for="comment"><b></b></label>
+						<input type="text" placeholder="Enter your Comment" name="comment" required>
+						<input type="hidden" name="_csrf" value="{{token}}">
+						<button type="submit">Comment</button>
+					</div>
+				</form>
+				
+				{{#if session.isLoggedIn}}
+					{{#if comments.length}}
+						{{#each comments}}
+						<div class="comment">
+							<h4>{{name}}</h4>
+							<p>{{comment}}</p>
+							<div class ="handleComment">
+								<a href="/posts/{{../post.id}}/deleteComment/{{id}}">Delete</a>
+								<a href ="/posts/{{../post.id}}/updateComment/{{id}}" id="sendBtn"> Edit </a>
+							</div>
+						</div>
+						{{/each}}
+					{{/if}}
+				{{else}}
+
+					{{#if comments.length}}
+						{{#each comments}}
+						<div class="comment">
+							<h4>{{name}}</h4>
+							<p>{{comment}}</p>
+						</div>
+						{{/each}}
+					{{/if}}
+				{{/if}}
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{/if}}

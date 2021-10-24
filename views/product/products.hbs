@@ -1,0 +1,26 @@
+{{#if hasDatabaseError}}
+	<p>Couldn't fetch the products at the moment, try again later.</p>
+{{else}}
+	{{#if products.length}}
+		{{#each products}}
+			<article class="postBox">
+					<div class="posts">
+						<div></div>
+					<img src="{{image}}" class="image-responsive" id="postImage" alt="Post Image"> </img>
+					<div class="nameBody">
+						<h2>{{name}}</h2>
+						<h2>{{price}} kr</h2>	
+					</div>
+					<br>
+					<a href="/products/{{id}}">Read more</a>
+				</div>
+			</article>
+		{{/each}}
+		
+	{{else}}
+		<div class="emptyContent">
+			<p>All products are sold right now!</p>
+		</div>
+	{{/if}}
+	
+{{/if}}
